@@ -12,6 +12,14 @@
 		0920B8782AABCC900043ACC9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8772AABCC900043ACC9 /* NetworkService.swift */; };
 		0920B87A2AABCDDA0043ACC9 /* NetworkServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8792AABCDDA0043ACC9 /* NetworkServiceError.swift */; };
 		0920B87D2AABD1920043ACC9 /* SearchResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B87C2AABD1920043ACC9 /* SearchResponseDTO.swift */; };
+		0920B8802AAC35F30043ACC9 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B87F2AAC35F30043ACC9 /* Cancellable.swift */; };
+		0920B8822AAC377B0043ACC9 /* SearchRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8812AAC377B0043ACC9 /* SearchRequestDTO.swift */; };
+		0920B8862AAC3E460043ACC9 /* SoftwareContentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8852AAC3E460043ACC9 /* SoftwareContentRepository.swift */; };
+		0920B8882AAC3FB60043ACC9 /* SoftwareMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8872AAC3FB60043ACC9 /* SoftwareMedia.swift */; };
+		0920B88A2AAC7F580043ACC9 /* SoftwareMediaRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8892AAC7F580043ACC9 /* SoftwareMediaRepositoryImpl.swift */; };
+		0920B88D2AAC83260043ACC9 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B88C2AAC83260043ACC9 /* RepositoryTask.swift */; };
+		0920B88F2AACB97C0043ACC9 /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B88E2AACB97C0043ACC9 /* NetworkSessionManager.swift */; };
+		0920B8912AACE5890043ACC9 /* SoftwareContentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8902AACE5890043ACC9 /* SoftwareContentUseCase.swift */; };
 		09E7AE442AABAF040020A796 /* iTunesSearchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE432AABAF040020A796 /* iTunesSearchAppTests.swift */; };
 		09E7AE4E2AABAF040020A796 /* iTunesSearchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE4D2AABAF040020A796 /* iTunesSearchAppUITests.swift */; };
 		09E7AE502AABAF040020A796 /* iTunesSearchAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE4F2AABAF040020A796 /* iTunesSearchAppUITestsLaunchTests.swift */; };
@@ -44,6 +52,14 @@
 		0920B8772AABCC900043ACC9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0920B8792AABCDDA0043ACC9 /* NetworkServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceError.swift; sourceTree = "<group>"; };
 		0920B87C2AABD1920043ACC9 /* SearchResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseDTO.swift; sourceTree = "<group>"; };
+		0920B87F2AAC35F30043ACC9 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		0920B8812AAC377B0043ACC9 /* SearchRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequestDTO.swift; sourceTree = "<group>"; };
+		0920B8852AAC3E460043ACC9 /* SoftwareContentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareContentRepository.swift; sourceTree = "<group>"; };
+		0920B8872AAC3FB60043ACC9 /* SoftwareMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareMedia.swift; sourceTree = "<group>"; };
+		0920B8892AAC7F580043ACC9 /* SoftwareMediaRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareMediaRepositoryImpl.swift; sourceTree = "<group>"; };
+		0920B88C2AAC83260043ACC9 /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
+		0920B88E2AACB97C0043ACC9 /* NetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManager.swift; sourceTree = "<group>"; };
+		0920B8902AACE5890043ACC9 /* SoftwareContentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareContentUseCase.swift; sourceTree = "<group>"; };
 		09E7AE292AABAF030020A796 /* iTunesSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7AE3F2AABAF040020A796 /* iTunesSearchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7AE432AABAF040020A796 /* iTunesSearchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAppTests.swift; sourceTree = "<group>"; };
@@ -86,8 +102,25 @@
 			isa = PBXGroup;
 			children = (
 				0920B87C2AABD1920043ACC9 /* SearchResponseDTO.swift */,
+				0920B8812AAC377B0043ACC9 /* SearchRequestDTO.swift */,
 			);
 			path = Mapping;
+			sourceTree = "<group>";
+		};
+		0920B87E2AAC35E40043ACC9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0920B87F2AAC35F30043ACC9 /* Cancellable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0920B88B2AAC83160043ACC9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0920B88C2AAC83260043ACC9 /* RepositoryTask.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		09E7AE202AABAF030020A796 = {
@@ -114,9 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				09E7AE6F2AABAF1E0020A796 /* App */,
-				09E7AE6C2AABAF1D0020A796 /* Infrastructure */,
 				09E7AE5C2AABAF1B0020A796 /* Layers */,
+				09E7AE6C2AABAF1D0020A796 /* Infrastructure */,
 				09E7AE722AABAF1F0020A796 /* Resources */,
+				0920B87E2AAC35E40043ACC9 /* Common */,
 			);
 			path = iTunesSearchApp;
 			sourceTree = "<group>";
@@ -141,9 +175,9 @@
 		09E7AE5C2AABAF1B0020A796 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				09E7AE5D2AABAF1B0020A796 /* Data */,
-				09E7AE602AABAF1B0020A796 /* Domain */,
 				09E7AE652AABAF1B0020A796 /* Presentation */,
+				09E7AE602AABAF1B0020A796 /* Domain */,
+				09E7AE5D2AABAF1B0020A796 /* Data */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -153,6 +187,7 @@
 			children = (
 				09E7AE5E2AABAF1B0020A796 /* Network */,
 				09E7AE5F2AABAF1B0020A796 /* Repositories */,
+				0920B88B2AAC83160043ACC9 /* Utilities */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -168,6 +203,7 @@
 		09E7AE5F2AABAF1B0020A796 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				0920B8892AAC7F580043ACC9 /* SoftwareMediaRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -193,6 +229,7 @@
 		09E7AE622AABAF1B0020A796 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				0920B8852AAC3E460043ACC9 /* SoftwareContentRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -200,6 +237,7 @@
 		09E7AE632AABAF1B0020A796 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				0920B8902AACE5890043ACC9 /* SoftwareContentUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -207,6 +245,7 @@
 		09E7AE642AABAF1B0020A796 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				0920B8872AAC3FB60043ACC9 /* SoftwareMedia.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -282,6 +321,7 @@
 				0920B8752AABCA720043ACC9 /* SearchEndpoint.swift */,
 				0920B8772AABCC900043ACC9 /* NetworkService.swift */,
 				0920B8792AABCDDA0043ACC9 /* NetworkServiceError.swift */,
+				0920B88E2AACB97C0043ACC9 /* NetworkSessionManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -443,10 +483,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0920B8782AABCC900043ACC9 /* NetworkService.swift in Sources */,
+				0920B8822AAC377B0043ACC9 /* SearchRequestDTO.swift in Sources */,
+				0920B8882AAC3FB60043ACC9 /* SoftwareMedia.swift in Sources */,
+				0920B8862AAC3E460043ACC9 /* SoftwareContentRepository.swift in Sources */,
 				0920B87A2AABCDDA0043ACC9 /* NetworkServiceError.swift in Sources */,
+				0920B8802AAC35F30043ACC9 /* Cancellable.swift in Sources */,
 				09E7AE782AABAF1F0020A796 /* AppDelegate.swift in Sources */,
+				0920B8912AACE5890043ACC9 /* SoftwareContentUseCase.swift in Sources */,
+				0920B88A2AAC7F580043ACC9 /* SoftwareMediaRepositoryImpl.swift in Sources */,
+				0920B88D2AAC83260043ACC9 /* RepositoryTask.swift in Sources */,
 				0920B8742AABC9990043ACC9 /* Endpoint.swift in Sources */,
 				0920B8762AABCA720043ACC9 /* SearchEndpoint.swift in Sources */,
+				0920B88F2AACB97C0043ACC9 /* NetworkSessionManager.swift in Sources */,
 				09E7AE772AABAF1F0020A796 /* SearchVC.swift in Sources */,
 				0920B87D2AABD1920043ACC9 /* SearchResponseDTO.swift in Sources */,
 			);

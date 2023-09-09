@@ -10,15 +10,28 @@ import Foundation
 protocol NetworkService {
     func request<E: Endpoint, Response: Decodable>(_ request: E,
                                                    response: Response.Type,
-                                                   completion: @escaping (Result<Response, Error>) -> ())
+                                                   completion: @escaping (Result<Response, Error>) -> ()) -> NetworkCancellable?
 }
 
+protocol NetworkCancellable {
+    func cancel()
+}
+
+extension URLSessionTask: NetworkCancellable { }
+
 final class DefaultNetworkService: NetworkService {
+    private let sessionManager: DefualtNetworkSessionManager
+    
+    init(sessionManager: DefualtNetworkSessionManager = .init()) {
+        self.sessionManager = sessionManager
+    }
+    
     func request<E, Response>(_ endpoint: E,
                               response: Response.Type,
-                              completion: @escaping (Result<Response, Error>) -> ()) where E : Endpoint, Response : Decodable {
+                              completion: @escaping (Result<Response, Error>) -> ()) -> NetworkCancellable? where E : Endpoint, Response : Decodable {
         guard var urlComponent = URLComponents(string: endpoint.base) else {
-            return completion(.failure(NetworkServiceError.invalidBaseUrl))
+            completion(.failure(NetworkServiceError.invalidBaseUrl))
+            return nil
         }
         
         urlComponent.path = endpoint.path
@@ -28,14 +41,15 @@ final class DefaultNetworkService: NetworkService {
         }
         
         guard let url = urlComponent.url else {
-            return completion(.failure(NetworkServiceError.invalidBaseUrl))
+            completion(.failure(NetworkServiceError.invalidBaseUrl))
+            return nil
         }
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = endpoint.method.rawValue
         urlRequest.allHTTPHeaderFields = endpoint.headers
         
-        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+        let sessionDataTask = sessionManager.request(urlRequest) { (data, response, error) in
             if let error = error {
                 return completion(.failure(error))
             }
@@ -59,6 +73,7 @@ final class DefaultNetworkService: NetworkService {
                 completion(.failure(error))
             }
         }
-        .resume()
+        
+        return sessionDataTask
     }
 }

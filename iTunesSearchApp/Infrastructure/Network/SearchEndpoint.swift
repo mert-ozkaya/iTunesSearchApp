@@ -48,9 +48,12 @@ extension SearchEndpoint: Endpoint {
 
 extension SearchEndpoint {
     struct SearchRequestInput {
-        var offset: Int
+        var offset: Int {
+            page * limit
+        }
         var limit: Int = 20
         var term: String
         var media: String
+        var page: Int
     }
 }

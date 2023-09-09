@@ -17,18 +17,6 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let aaa = DefaultNetworkService()
-        aaa.request(SearchEndpoint.search(input: .init(offset: 20,
-                                                                                               term: "ekk",
-                                                                                               media: "software")),
-                                        response: SearchResponseDTO.self) { result in
-            switch result {
-            case .success(let response):
-                print("resss: \(response)")
-            case .failure(let error):
-                print("Error: \(error)")
-            }
-        }
     }
 
 }

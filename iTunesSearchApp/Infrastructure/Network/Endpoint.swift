@@ -11,7 +11,7 @@ typealias Parameters = [String: String]
 typealias Headers = [String: String]
 
 protocol Endpoint {
-    associatedtype Response = Codable
+    associatedtype Response = Decodable
     var base: String { get }
     var path: String { get }
     var parameters: Parameters { get }
@@ -24,14 +24,6 @@ extension Endpoint {
         return "https://itunes.apple.com"
     }
 }
-
-extension Endpoint where Response: Decodable {
-    func decode(_ data: Data) throws -> Response {
-        let decoder = JSONDecoder()
-        return try decoder.decode(Response.self, from: data)
-    }
-}
-
 
 enum HTTPMethod: String {
     case GET = "GET"
