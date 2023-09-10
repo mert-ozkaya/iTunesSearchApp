@@ -20,6 +20,14 @@
 		0920B88D2AAC83260043ACC9 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B88C2AAC83260043ACC9 /* RepositoryTask.swift */; };
 		0920B88F2AACB97C0043ACC9 /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B88E2AACB97C0043ACC9 /* NetworkSessionManager.swift */; };
 		0920B8912AACE5890043ACC9 /* SoftwareContentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8902AACE5890043ACC9 /* SoftwareContentUseCase.swift */; };
+		09C74D702AAD0D7A00D49DDB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D6F2AAD0D7A00D49DDB /* SearchViewModel.swift */; };
+		09C74D792AAD142400D49DDB /* OnlyImageViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D782AAD142400D49DDB /* OnlyImageViewCollectionCell.swift */; };
+		09C74D7B2AAD231D00D49DDB /* TitleCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D7A2AAD231D00D49DDB /* TitleCollectionHeaderView.swift */; };
+		09C74D7D2AADBDA900D49DDB /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D7C2AADBDA900D49DDB /* BaseNavigationController.swift */; };
+		09C74D802AADCEC500D49DDB /* OnlyImageCollectionViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D7F2AADCEC500D49DDB /* OnlyImageCollectionViewProvider.swift */; };
+		09C74D832AADD1B100D49DDB /* PageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D812AADD1B100D49DDB /* PageTableViewCell.swift */; };
+		09C74D842AADD1B100D49DDB /* PageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C74D822AADD1B100D49DDB /* PageTableViewCell.xib */; };
+		09C74D862AADE64100D49DDB /* OnlyTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D852AADE64100D49DDB /* OnlyTextTableCell.swift */; };
 		09E7AE442AABAF040020A796 /* iTunesSearchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE432AABAF040020A796 /* iTunesSearchAppTests.swift */; };
 		09E7AE4E2AABAF040020A796 /* iTunesSearchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE4D2AABAF040020A796 /* iTunesSearchAppUITests.swift */; };
 		09E7AE502AABAF040020A796 /* iTunesSearchAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE4F2AABAF040020A796 /* iTunesSearchAppUITestsLaunchTests.swift */; };
@@ -60,6 +68,14 @@
 		0920B88C2AAC83260043ACC9 /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
 		0920B88E2AACB97C0043ACC9 /* NetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManager.swift; sourceTree = "<group>"; };
 		0920B8902AACE5890043ACC9 /* SoftwareContentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareContentUseCase.swift; sourceTree = "<group>"; };
+		09C74D6F2AAD0D7A00D49DDB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		09C74D782AAD142400D49DDB /* OnlyImageViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyImageViewCollectionCell.swift; sourceTree = "<group>"; };
+		09C74D7A2AAD231D00D49DDB /* TitleCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionHeaderView.swift; sourceTree = "<group>"; };
+		09C74D7C2AADBDA900D49DDB /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		09C74D7F2AADCEC500D49DDB /* OnlyImageCollectionViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyImageCollectionViewProvider.swift; sourceTree = "<group>"; };
+		09C74D812AADD1B100D49DDB /* PageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTableViewCell.swift; sourceTree = "<group>"; };
+		09C74D822AADD1B100D49DDB /* PageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageTableViewCell.xib; sourceTree = "<group>"; };
+		09C74D852AADE64100D49DDB /* OnlyTextTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyTextTableCell.swift; sourceTree = "<group>"; };
 		09E7AE292AABAF030020A796 /* iTunesSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7AE3F2AABAF040020A796 /* iTunesSearchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7AE432AABAF040020A796 /* iTunesSearchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAppTests.swift; sourceTree = "<group>"; };
@@ -121,6 +137,26 @@
 				0920B88C2AAC83260043ACC9 /* RepositoryTask.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		09C74D772AAD13F400D49DDB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				09C74D782AAD142400D49DDB /* OnlyImageViewCollectionCell.swift */,
+				09C74D7A2AAD231D00D49DDB /* TitleCollectionHeaderView.swift */,
+				09C74D812AADD1B100D49DDB /* PageTableViewCell.swift */,
+				09C74D822AADD1B100D49DDB /* PageTableViewCell.xib */,
+				09C74D852AADE64100D49DDB /* OnlyTextTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		09C74D7E2AADCE4300D49DDB /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				09C74D7F2AADCEC500D49DDB /* OnlyImageCollectionViewProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		09E7AE202AABAF030020A796 = {
@@ -258,6 +294,7 @@
 				09E7AE682AABAF1B0020A796 /* Extensions */,
 				09E7AE692AABAF1B0020A796 /* Search */,
 				09E7AE6B2AABAF1B0020A796 /* SearchResultDetail */,
+				09C74D7E2AADCE4300D49DDB /* Providers */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -272,6 +309,7 @@
 		09E7AE672AABAF1B0020A796 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
+				09C74D7C2AADBDA900D49DDB /* BaseNavigationController.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -286,7 +324,9 @@
 		09E7AE692AABAF1B0020A796 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				09C74D772AAD13F400D49DDB /* Cells */,
 				09E7AE6A2AABAF1B0020A796 /* SearchVC.swift */,
+				09C74D6F2AAD0D7A00D49DDB /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -457,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E7AE792AABAF1F0020A796 /* Assets.xcassets in Resources */,
+				09C74D842AADD1B100D49DDB /* PageTableViewCell.xib in Resources */,
 				09E7AE7A2AABAF1F0020A796 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,20 +523,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C74D832AADD1B100D49DDB /* PageTableViewCell.swift in Sources */,
 				0920B8782AABCC900043ACC9 /* NetworkService.swift in Sources */,
 				0920B8822AAC377B0043ACC9 /* SearchRequestDTO.swift in Sources */,
 				0920B8882AAC3FB60043ACC9 /* SoftwareMedia.swift in Sources */,
 				0920B8862AAC3E460043ACC9 /* SoftwareContentRepository.swift in Sources */,
 				0920B87A2AABCDDA0043ACC9 /* NetworkServiceError.swift in Sources */,
 				0920B8802AAC35F30043ACC9 /* Cancellable.swift in Sources */,
+				09C74D702AAD0D7A00D49DDB /* SearchViewModel.swift in Sources */,
+				09C74D7B2AAD231D00D49DDB /* TitleCollectionHeaderView.swift in Sources */,
 				09E7AE782AABAF1F0020A796 /* AppDelegate.swift in Sources */,
 				0920B8912AACE5890043ACC9 /* SoftwareContentUseCase.swift in Sources */,
 				0920B88A2AAC7F580043ACC9 /* SoftwareMediaRepositoryImpl.swift in Sources */,
 				0920B88D2AAC83260043ACC9 /* RepositoryTask.swift in Sources */,
 				0920B8742AABC9990043ACC9 /* Endpoint.swift in Sources */,
+				09C74D802AADCEC500D49DDB /* OnlyImageCollectionViewProvider.swift in Sources */,
 				0920B8762AABCA720043ACC9 /* SearchEndpoint.swift in Sources */,
 				0920B88F2AACB97C0043ACC9 /* NetworkSessionManager.swift in Sources */,
+				09C74D7D2AADBDA900D49DDB /* BaseNavigationController.swift in Sources */,
 				09E7AE772AABAF1F0020A796 /* SearchVC.swift in Sources */,
+				09C74D862AADE64100D49DDB /* OnlyTextTableCell.swift in Sources */,
+				09C74D792AAD142400D49DDB /* OnlyImageViewCollectionCell.swift in Sources */,
 				0920B87D2AABD1920043ACC9 /* SearchResponseDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
