@@ -36,6 +36,8 @@
 		09C74D862AADE64100D49DDB /* OnlyTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D852AADE64100D49DDB /* OnlyTextTableCell.swift */; };
 		09C74D892AAE575F00D49DDB /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D882AAE575F00D49DDB /* String+Ext.swift */; };
 		09C74D8F2AAFB81400D49DDB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D8E2AAFB81400D49DDB /* ImageDownloader.swift */; };
+		09E642622AB3BA1B00C00FFD /* SearchResultDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E642602AB3BA1B00C00FFD /* SearchResultDetailVC.swift */; };
+		09E642632AB3BA1B00C00FFD /* SearchResultDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E642612AB3BA1B00C00FFD /* SearchResultDetailVC.xib */; };
 		09E7AE442AABAF040020A796 /* iTunesSearchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE432AABAF040020A796 /* iTunesSearchAppTests.swift */; };
 		09E7AE4E2AABAF040020A796 /* iTunesSearchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE4D2AABAF040020A796 /* iTunesSearchAppUITests.swift */; };
 		09E7AE502AABAF040020A796 /* iTunesSearchAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE4F2AABAF040020A796 /* iTunesSearchAppUITestsLaunchTests.swift */; };
@@ -91,6 +93,8 @@
 		09C74D852AADE64100D49DDB /* OnlyTextTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyTextTableCell.swift; sourceTree = "<group>"; };
 		09C74D882AAE575F00D49DDB /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		09C74D8E2AAFB81400D49DDB /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		09E642602AB3BA1B00C00FFD /* SearchResultDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDetailVC.swift; sourceTree = "<group>"; };
+		09E642612AB3BA1B00C00FFD /* SearchResultDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultDetailVC.xib; sourceTree = "<group>"; };
 		09E7AE292AABAF030020A796 /* iTunesSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7AE3F2AABAF040020A796 /* iTunesSearchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7AE432AABAF040020A796 /* iTunesSearchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAppTests.swift; sourceTree = "<group>"; };
@@ -370,6 +374,8 @@
 		09E7AE6B2AABAF1B0020A796 /* SearchResultDetail */ = {
 			isa = PBXGroup;
 			children = (
+				09E642602AB3BA1B00C00FFD /* SearchResultDetailVC.swift */,
+				09E642612AB3BA1B00C00FFD /* SearchResultDetailVC.xib */,
 			);
 			path = SearchResultDetail;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 			files = (
 				09E7AE792AABAF1F0020A796 /* Assets.xcassets in Resources */,
 				09C74D842AADD1B100D49DDB /* PageTableViewCell.xib in Resources */,
+				09E642632AB3BA1B00C00FFD /* SearchResultDetailVC.xib in Resources */,
 				09989AD52AB3AA1C002802C3 /* DevAppConfig.xcconfig in Resources */,
 				09989AD72AB3AA2F002802C3 /* ProdAppConfig.xcconfig in Resources */,
 				09E7AE7A2AABAF1F0020A796 /* LaunchScreen.storyboard in Resources */,
@@ -576,6 +583,7 @@
 				0920B8822AAC377B0043ACC9 /* SearchRequestDTO.swift in Sources */,
 				0920B8882AAC3FB60043ACC9 /* SoftwareMedia.swift in Sources */,
 				0920B8862AAC3E460043ACC9 /* SoftwareContentRepository.swift in Sources */,
+				09E642622AB3BA1B00C00FFD /* SearchResultDetailVC.swift in Sources */,
 				0920B87A2AABCDDA0043ACC9 /* NetworkServiceError.swift in Sources */,
 				0920B8802AAC35F30043ACC9 /* Cancellable.swift in Sources */,
 				09C74D892AAE575F00D49DDB /* String+Ext.swift in Sources */,

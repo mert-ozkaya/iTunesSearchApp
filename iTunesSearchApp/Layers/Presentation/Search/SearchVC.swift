@@ -76,7 +76,18 @@ class SearchVC: UIViewController {
             switch state {
             case .updateUI:
                 self.tableView.reloadData()
+            case .openImagePoster(url: let url):
+                self.openPosterScreen(url: url)
             }
+        }
+    }
+    
+    func openPosterScreen(url: String) {
+        
+        let vc = SearchResultDetailVC()
+        vc.imageUrl = url
+        DispatchQueue.main.async { [weak self] in
+            self?.present(vc, animated: true)
         }
     }
 }

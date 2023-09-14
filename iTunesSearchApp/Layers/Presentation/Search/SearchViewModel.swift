@@ -64,7 +64,7 @@ final class SearchViewModel {
     
     func triggerState(_ state: VMState) {
         DispatchQueue.main.async { [weak self] in
-            self?.stateClosure?(.updateUI)
+            self?.stateClosure?(state)
         }
     }
     
@@ -104,6 +104,11 @@ final class SearchViewModel {
             Loger.error("\(String(describing: self)) >> searchFailureResult >> endOfPages")
         case .resultsEmpty(let currentPage):
             Loger.error("\(String(describing: self)) >> searchFailureResult >> resultsEmpty >> page: \(String(describing: currentPage))")
+            if currentPage == 0 {
+                _sections.removeAll()
+                _sections.append(NoDataSection())
+                triggerState(.updateUI)
+            }
         case .imageNotDownloaded(let url, let currentPage):
             Loger.error("\(String(describing: self)) >> imageNotDownloaded >> imageURL: \(url) ___ page: \(currentPage)")
         }
@@ -113,10 +118,10 @@ final class SearchViewModel {
         guard let content = content else { return }
         
         if let tableViewSection = getTableViewSection(page: content.currentPage) {
-            tableViewSection.collectionViewProvider.addViewData(content: content)
+            tableViewSection.collectionViewProvider.addViewData(content: content, delegate: self)
         } else {
             let collectionViewProvider = OnlyImageCollectionViewProvider()
-            collectionViewProvider.setData(sections: [.init(fileSizeRangeType: content.sizeRangeType, rows: [content.url])])
+            collectionViewProvider.setData(sections: [.init(fileSizeRangeType: content.sizeRangeType, rows: [content.url])], delegate: self)
             _sections.append(TableViewSection(page: content.currentPage, pageHeaderTitle: "Page-\(content.currentPage + 1)", collectionViewProvider: collectionViewProvider))
         }
         
@@ -129,11 +134,18 @@ final class SearchViewModel {
     
 }
 
+extension SearchViewModel: OnlyImageCVProviderDelegate {
+    func didSelect(url: String) {
+        triggerState(.openImagePoster(url: url))
+    }
+}
+
 protocol Section { }
 
 extension SearchViewModel {
     enum VMState {
         case updateUI
+        case openImagePoster(url: String)
     }
     
     struct NoDataSection: Section {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchResultDetailVC" customModule="iTunesSearchApp" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="Mg6-mA-KcO" id="qUb-W8-Dzs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mg6-mA-KcO">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc5-Xo-Ofb">
+                    <rect key="frame" x="321" y="30" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="O3k-mY-Yb7"/>
+                        <constraint firstAttribute="height" constant="44" id="n0D-sX-mK2"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="closeIcon"/>
+                    <connections>
+                        <action selector="closeScreen:" destination="-1" eventType="touchUpInside" id="XLO-Bp-ZLQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Mg6-mA-KcO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="21G-rr-PFl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mg6-mA-KcO" secondAttribute="trailing" id="24j-uo-1Si"/>
+                <constraint firstItem="Mg6-mA-KcO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="U8U-qJ-IBF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Cc5-Xo-Ofb" secondAttribute="trailing" constant="10" id="UTr-Cs-WLc"/>
+                <constraint firstItem="Cc5-Xo-Ofb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="cuQ-o3-uec"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Mg6-mA-KcO" secondAttribute="bottom" id="zwY-tD-tAU"/>
+            </constraints>
+            <point key="canvasLocation" x="31.199999999999999" y="20.239880059970016"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeIcon" width="44" height="44"/>
+    </resources>
+</document>
