@@ -6,11 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class OnlyImageViewCollectionCell: UICollectionViewCell {
-    
-    static var cellHeight: CGFloat = 174
-    
+        
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -36,8 +35,8 @@ class OnlyImageViewCollectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupUI(image: UIImage) {
+    func setupUI(url: String) {
         self.backgroundColor = .purple
-        self.imageView.image = image
+        self.imageView.kf.setImage(with: URL(string: url))
     }
 }

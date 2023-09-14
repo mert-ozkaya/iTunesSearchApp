@@ -15,7 +15,10 @@ final class OnlyImageCollectionViewProvider: UIView {
         collectionView.dataSource = self
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = .init(width: (UIScreen.main.bounds.width - 30)/2, height: 174)
+        let width = (UIScreen.main.bounds.width - 30)/2
+        let imageRatio: CGFloat = 696/392
+        let height = width*imageRatio
+        layout.itemSize = .init(width: width, height: height)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         layout.headerReferenceSize = .init(width: UIScreen.main.bounds.width, height: 30)
@@ -32,7 +35,7 @@ final class OnlyImageCollectionViewProvider: UIView {
         return collectionView
     }()
     
-    private var sections: [ViewData] = []
+   var sections: [ViewData] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,6 +59,18 @@ final class OnlyImageCollectionViewProvider: UIView {
         self.sections = sections
         self.collectionView.reloadData()
     }
+    
+    func addViewData(content: SoftwareMediaPresentableModel) {
+        if sections.first(where: { $0.fileSizeRangeType == content.sizeRangeType }) != nil {
+            if let index = sections.firstIndex(where: { $0.fileSizeRangeType == content.sizeRangeType }) {
+                sections[index].rows.append(content.url)
+            }
+        } else {
+            sections.append(.init(fileSizeRangeType: content.sizeRangeType, rows: [content.url]))            
+        }
+        
+        collectionView.reloadData()
+    }
 }
 
 extension OnlyImageCollectionViewProvider: UICollectionViewDataSource {
@@ -65,11 +80,14 @@ extension OnlyImageCollectionViewProvider: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return sections[section].rows.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OnlyImageViewCollectionCell", for: indexPath) as! OnlyImageViewCollectionCell
+            
+        cell.setupUI(url: self.sections[indexPath.section].rows[indexPath.row])
+        
         return cell
     }
     
@@ -77,7 +95,7 @@ extension OnlyImageCollectionViewProvider: UICollectionViewDataSource {
         if kind == UICollectionView.elementKindSectionHeader {
             // Başlık görünümünü oluşturun ve döndürün
             if let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "TitleCollectionHeaderView", for: indexPath) as? TitleCollectionHeaderView {
-                headerView.titleLabel.text = sections[indexPath.section].headerTitle
+                headerView.titleLabel.text = sections[indexPath.section].fileSizeRangeType.getTitle()
                 return headerView
             }
         }
@@ -90,7 +108,7 @@ extension OnlyImageCollectionViewProvider: UICollectionViewDelegate {
 
 extension OnlyImageCollectionViewProvider {
     struct ViewData {
-        var headerTitle: String
-        var imageURLs: [String]
+        var fileSizeRangeType: SoftwareMediaDataSizeRangeType
+        var rows: [String]
     }
 }

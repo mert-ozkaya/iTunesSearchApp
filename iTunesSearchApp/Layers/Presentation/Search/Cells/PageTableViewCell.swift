@@ -21,6 +21,14 @@ class PageTableViewCell: UITableViewCell {
     
     func setupUI(collectionViewProvider: OnlyImageCollectionViewProvider) {
         self.collectionViewProvider = collectionViewProvider
+        self.collectionViewProvider!.translatesAutoresizingMaskIntoConstraints = false
         addSubview(collectionViewProvider)
+        
+        NSLayoutConstraint.activate([
+            self.collectionViewProvider!.topAnchor.constraint(equalTo: topAnchor),
+            self.collectionViewProvider!.leadingAnchor.constraint(equalTo: leadingAnchor),
+            self.collectionViewProvider!.trailingAnchor.constraint(equalTo: trailingAnchor),
+            self.collectionViewProvider!.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 }

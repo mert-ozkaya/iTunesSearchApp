@@ -20,6 +20,9 @@
 		0920B88D2AAC83260043ACC9 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B88C2AAC83260043ACC9 /* RepositoryTask.swift */; };
 		0920B88F2AACB97C0043ACC9 /* NetworkSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B88E2AACB97C0043ACC9 /* NetworkSessionManager.swift */; };
 		0920B8912AACE5890043ACC9 /* SoftwareContentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0920B8902AACE5890043ACC9 /* SoftwareContentUseCase.swift */; };
+		09989ACE2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09989ACD2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift */; };
+		09989AD02AB38E17002802C3 /* Loger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09989ACF2AB38E17002802C3 /* Loger.swift */; };
+		09989AD32AB39E8E002802C3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 09989AD22AB39E8E002802C3 /* Kingfisher */; };
 		09C74D702AAD0D7A00D49DDB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D6F2AAD0D7A00D49DDB /* SearchViewModel.swift */; };
 		09C74D792AAD142400D49DDB /* OnlyImageViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D782AAD142400D49DDB /* OnlyImageViewCollectionCell.swift */; };
 		09C74D7B2AAD231D00D49DDB /* TitleCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D7A2AAD231D00D49DDB /* TitleCollectionHeaderView.swift */; };
@@ -28,6 +31,8 @@
 		09C74D832AADD1B100D49DDB /* PageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D812AADD1B100D49DDB /* PageTableViewCell.swift */; };
 		09C74D842AADD1B100D49DDB /* PageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C74D822AADD1B100D49DDB /* PageTableViewCell.xib */; };
 		09C74D862AADE64100D49DDB /* OnlyTextTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D852AADE64100D49DDB /* OnlyTextTableCell.swift */; };
+		09C74D892AAE575F00D49DDB /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D882AAE575F00D49DDB /* String+Ext.swift */; };
+		09C74D8F2AAFB81400D49DDB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D8E2AAFB81400D49DDB /* ImageDownloader.swift */; };
 		09E7AE442AABAF040020A796 /* iTunesSearchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE432AABAF040020A796 /* iTunesSearchAppTests.swift */; };
 		09E7AE4E2AABAF040020A796 /* iTunesSearchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE4D2AABAF040020A796 /* iTunesSearchAppUITests.swift */; };
 		09E7AE502AABAF040020A796 /* iTunesSearchAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E7AE4F2AABAF040020A796 /* iTunesSearchAppUITestsLaunchTests.swift */; };
@@ -68,6 +73,8 @@
 		0920B88C2AAC83260043ACC9 /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
 		0920B88E2AACB97C0043ACC9 /* NetworkSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManager.swift; sourceTree = "<group>"; };
 		0920B8902AACE5890043ACC9 /* SoftwareContentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareContentUseCase.swift; sourceTree = "<group>"; };
+		09989ACD2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareMediaPresentableModel.swift; sourceTree = "<group>"; };
+		09989ACF2AB38E17002802C3 /* Loger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loger.swift; sourceTree = "<group>"; };
 		09C74D6F2AAD0D7A00D49DDB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		09C74D782AAD142400D49DDB /* OnlyImageViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyImageViewCollectionCell.swift; sourceTree = "<group>"; };
 		09C74D7A2AAD231D00D49DDB /* TitleCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -76,6 +83,8 @@
 		09C74D812AADD1B100D49DDB /* PageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTableViewCell.swift; sourceTree = "<group>"; };
 		09C74D822AADD1B100D49DDB /* PageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageTableViewCell.xib; sourceTree = "<group>"; };
 		09C74D852AADE64100D49DDB /* OnlyTextTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyTextTableCell.swift; sourceTree = "<group>"; };
+		09C74D882AAE575F00D49DDB /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		09C74D8E2AAFB81400D49DDB /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		09E7AE292AABAF030020A796 /* iTunesSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7AE3F2AABAF040020A796 /* iTunesSearchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E7AE432AABAF040020A796 /* iTunesSearchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchAppTests.swift; sourceTree = "<group>"; };
@@ -94,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09989AD32AB39E8E002802C3 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +136,9 @@
 		0920B87E2AAC35E40043ACC9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				09C74D872AAE575200D49DDB /* Extensions */,
 				0920B87F2AAC35F30043ACC9 /* Cancellable.swift */,
+				09989ACF2AB38E17002802C3 /* Loger.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -157,6 +169,22 @@
 				09C74D7F2AADCEC500D49DDB /* OnlyImageCollectionViewProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		09C74D872AAE575200D49DDB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09C74D882AAE575F00D49DDB /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09C74D8D2AAFB7C500D49DDB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				09C74D8E2AAFB81400D49DDB /* ImageDownloader.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		09E7AE202AABAF030020A796 = {
@@ -250,6 +278,7 @@
 				09E7AE642AABAF1B0020A796 /* Entities */,
 				09E7AE632AABAF1B0020A796 /* UseCases */,
 				09E7AE612AABAF1B0020A796 /* Protocols */,
+				09C74D8D2AAFB7C500D49DDB /* Utilities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -282,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				0920B8872AAC3FB60043ACC9 /* SoftwareMedia.swift */,
+				09989ACD2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -408,6 +438,9 @@
 			dependencies = (
 			);
 			name = iTunesSearchApp;
+			packageProductDependencies = (
+				09989AD22AB39E8E002802C3 /* Kingfisher */,
+			);
 			productName = iTunesSearchApp;
 			productReference = 09E7AE292AABAF030020A796 /* iTunesSearchApp.app */;
 			productType = "com.apple.product-type.application";
@@ -480,6 +513,9 @@
 				Base,
 			);
 			mainGroup = 09E7AE202AABAF030020A796;
+			packageReferences = (
+				09989AD12AB39E8E002802C3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 09E7AE2A2AABAF030020A796 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -524,14 +560,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C74D832AADD1B100D49DDB /* PageTableViewCell.swift in Sources */,
+				09989AD02AB38E17002802C3 /* Loger.swift in Sources */,
 				0920B8782AABCC900043ACC9 /* NetworkService.swift in Sources */,
 				0920B8822AAC377B0043ACC9 /* SearchRequestDTO.swift in Sources */,
 				0920B8882AAC3FB60043ACC9 /* SoftwareMedia.swift in Sources */,
 				0920B8862AAC3E460043ACC9 /* SoftwareContentRepository.swift in Sources */,
 				0920B87A2AABCDDA0043ACC9 /* NetworkServiceError.swift in Sources */,
 				0920B8802AAC35F30043ACC9 /* Cancellable.swift in Sources */,
+				09C74D892AAE575F00D49DDB /* String+Ext.swift in Sources */,
 				09C74D702AAD0D7A00D49DDB /* SearchViewModel.swift in Sources */,
 				09C74D7B2AAD231D00D49DDB /* TitleCollectionHeaderView.swift in Sources */,
+				09C74D8F2AAFB81400D49DDB /* ImageDownloader.swift in Sources */,
 				09E7AE782AABAF1F0020A796 /* AppDelegate.swift in Sources */,
 				0920B8912AACE5890043ACC9 /* SoftwareContentUseCase.swift in Sources */,
 				0920B88A2AAC7F580043ACC9 /* SoftwareMediaRepositoryImpl.swift in Sources */,
@@ -540,6 +579,7 @@
 				09C74D802AADCEC500D49DDB /* OnlyImageCollectionViewProvider.swift in Sources */,
 				0920B8762AABCA720043ACC9 /* SearchEndpoint.swift in Sources */,
 				0920B88F2AACB97C0043ACC9 /* NetworkSessionManager.swift in Sources */,
+				09989ACE2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift in Sources */,
 				09C74D7D2AADBDA900D49DDB /* BaseNavigationController.swift in Sources */,
 				09E7AE772AABAF1F0020A796 /* SearchVC.swift in Sources */,
 				09C74D862AADE64100D49DDB /* OnlyTextTableCell.swift in Sources */,
@@ -719,7 +759,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -746,7 +786,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -876,6 +916,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		09989AD12AB39E8E002802C3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09989AD22AB39E8E002802C3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09989AD12AB39E8E002802C3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09E7AE212AABAF030020A796 /* Project object */;
 }

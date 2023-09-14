@@ -16,13 +16,13 @@ struct SoftwareContentRepositoryImpl: SoftwareContentRepository {
     
     func searchSoftwareContents(term: String, page: Int, completion: @escaping (Result<SoftwareMediaPage, Error>) -> ()) -> Cancellable? {
         let requestInput = SearchEndpoint.SearchRequestInput(term: term, media: "software", page: page)
-        var repositoryTask = RepositoryTask()
+        let repositoryTask = RepositoryTask()
         
         repositoryTask.networkTask = networkService.request(SearchEndpoint.search(input: requestInput),
                                                             response: SearchResponseDTO.self) { (result: Result<SearchResponseDTO, Error>) -> () in
             
             switch result {
-            case .success(var dto):
+            case .success(let dto):
                 completion(.success(.init(resultCount: dto.resultCount ?? 0, results: mapToSoftwareMedias(dto.results))))
             case .failure(let error):
                 completion(.failure(error))

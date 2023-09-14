@@ -87,8 +87,8 @@ extension SearchVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let section = viewModel?.sections[section] as? SearchViewModel.ContentSection {
-            return section.sectionPageContent.count
+        if viewModel?.sections[section] is SearchViewModel.TableViewSection {
+            return 1
         } else if viewModel?.sections[section] is SearchViewModel.NoDataSection {
             return 1
         } else {
@@ -97,12 +97,9 @@ extension SearchVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let section = viewModel?.sections[indexPath.section] as? SearchViewModel.ContentSection {
+        if let section = viewModel?.sections[indexPath.section] as? SearchViewModel.TableViewSection {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PageTableViewCell", for: indexPath) as! PageTableViewCell
-            let provider = section.sectionPageContent[indexPath.row].provider
-            provider.frame = .init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: OnlyImageViewCollectionCell.cellHeight*10 + 9*10 + 30 + 20)
-            provider.layoutIfNeeded()
-            cell.setupUI(collectionViewProvider: provider)
+            cell.setupUI(collectionViewProvider: section.collectionViewProvider)
             return cell
         } else if let section = viewModel?.sections[indexPath.section] as? SearchViewModel.NoDataSection {
             let cell = OnlyTextTableCell(style: .default, reuseIdentifier: "OnlyTextTableCell")
@@ -117,7 +114,7 @@ extension SearchVC: UITableViewDataSource {
 extension SearchVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if let section = viewModel?.sections[section] as? SearchViewModel.ContentSection {
+        if let section = viewModel?.sections[section] as? SearchViewModel.TableViewSection {
             let view = UIView()
             view.backgroundColor = .lightGray
             let label = UILabel(frame: .init(x: 10, y: 0, width: tableView.frame.width, height: 30))
@@ -134,12 +131,15 @@ extension SearchVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return viewModel?.sections[section] is SearchViewModel.ContentSection ? 30 : 0
+        return viewModel?.sections[section] is SearchViewModel.TableViewSection ? 30 : 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return viewModel?.sections[indexPath.section] is SearchViewModel.ContentSection ? (OnlyImageViewCollectionCell.cellHeight*10 + 9*10 + 30 + 20) : 30
+        let height = (viewModel?.sections[indexPath.section] as? SearchViewModel.TableViewSection)?.collectionViewProvider.collectionView.contentSize.height
+        
+        return viewModel?.sections[indexPath.section] is SearchViewModel.TableViewSection ? (height ?? 100) : 30
     }
+
 }
 
 extension SearchVC: UISearchBarDelegate {
