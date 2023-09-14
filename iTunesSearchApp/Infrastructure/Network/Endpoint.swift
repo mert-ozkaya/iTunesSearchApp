@@ -21,7 +21,7 @@ protocol Endpoint {
 
 extension Endpoint {
     var base: String {
-        return "https://itunes.apple.com"
+        return Environment.apiBaseURL
     }
 }
 

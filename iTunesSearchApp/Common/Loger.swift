@@ -12,7 +12,13 @@ class Loger {
     static var shared = Loger()
     
     /// is Logging enable
-    var isEnabled: Bool = true
+    var isEnabled: Bool {
+        #if DEBUG
+            return true
+        #else
+            return false
+        #endif
+    }
     
     static func success(_ message: Any!) {
         Loger.shared.debug(type: "✅", message: message)

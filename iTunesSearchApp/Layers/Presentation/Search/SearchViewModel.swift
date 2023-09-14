@@ -69,7 +69,7 @@ final class SearchViewModel {
     }
     
     func search(with term: String) {
-        print(String(describing: self), "Search: \(term)")
+        Loger.info("\(String(describing: self)) Search: \(term)")
         _sections.removeAll()
         taskCancellable?.cancel()
         taskCancellable = softwareContentUseCase.searchSoftwareContents(term: term, completion: { [weak self] (result) in

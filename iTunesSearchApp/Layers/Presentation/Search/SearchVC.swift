@@ -144,7 +144,7 @@ extension SearchVC: UITableViewDelegate {
 
 extension SearchVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("textDidChange >> text: \(searchText)")
+        Loger.info("textDidChange >> text: \(searchText)")
         searchTimer?.invalidate()
         searchTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] timer in
             self?.viewModel?.search(with: searchText.trimmingCharacters(in: .whitespacesAndNewlines))
@@ -152,7 +152,7 @@ extension SearchVC: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searchBarSearchButtonClicked")
+        Loger.info("searchBarSearchButtonClicked")
         searchBar.resignFirstResponder()
     }
 }

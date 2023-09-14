@@ -1,0 +1,8 @@
+//
+//  DevAppConfig.xcconfig
+//  iTunesSearchApp
+//
+//  Created by Mert Ozkaya on 14.09.2023.
+//
+
+API_BASE_URL = itunes.apple.com // Dev ortamının base url'i farklı olsaydı buraya koyulurdu.

@@ -23,6 +23,9 @@
 		09989ACE2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09989ACD2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift */; };
 		09989AD02AB38E17002802C3 /* Loger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09989ACF2AB38E17002802C3 /* Loger.swift */; };
 		09989AD32AB39E8E002802C3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 09989AD22AB39E8E002802C3 /* Kingfisher */; };
+		09989AD52AB3AA1C002802C3 /* DevAppConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 09989AD42AB3AA1C002802C3 /* DevAppConfig.xcconfig */; };
+		09989AD72AB3AA2F002802C3 /* ProdAppConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 09989AD62AB3AA2F002802C3 /* ProdAppConfig.xcconfig */; };
+		09989AD92AB3AA6F002802C3 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09989AD82AB3AA6F002802C3 /* Environment.swift */; };
 		09C74D702AAD0D7A00D49DDB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D6F2AAD0D7A00D49DDB /* SearchViewModel.swift */; };
 		09C74D792AAD142400D49DDB /* OnlyImageViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D782AAD142400D49DDB /* OnlyImageViewCollectionCell.swift */; };
 		09C74D7B2AAD231D00D49DDB /* TitleCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C74D7A2AAD231D00D49DDB /* TitleCollectionHeaderView.swift */; };
@@ -75,6 +78,9 @@
 		0920B8902AACE5890043ACC9 /* SoftwareContentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareContentUseCase.swift; sourceTree = "<group>"; };
 		09989ACD2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareMediaPresentableModel.swift; sourceTree = "<group>"; };
 		09989ACF2AB38E17002802C3 /* Loger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loger.swift; sourceTree = "<group>"; };
+		09989AD42AB3AA1C002802C3 /* DevAppConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DevAppConfig.xcconfig; sourceTree = "<group>"; };
+		09989AD62AB3AA2F002802C3 /* ProdAppConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProdAppConfig.xcconfig; sourceTree = "<group>"; };
+		09989AD82AB3AA6F002802C3 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		09C74D6F2AAD0D7A00D49DDB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		09C74D782AAD142400D49DDB /* OnlyImageViewCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyImageViewCollectionCell.swift; sourceTree = "<group>"; };
 		09C74D7A2AAD231D00D49DDB /* TitleCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -321,9 +327,9 @@
 			children = (
 				09E7AE662AABAF1B0020A796 /* ViewBuilder */,
 				09E7AE672AABAF1B0020A796 /* Bases */,
-				09E7AE682AABAF1B0020A796 /* Extensions */,
 				09E7AE692AABAF1B0020A796 /* Search */,
 				09E7AE6B2AABAF1B0020A796 /* SearchResultDetail */,
+				09E7AE682AABAF1B0020A796 /* Extensions */,
 				09C74D7E2AADCE4300D49DDB /* Providers */,
 			);
 			path = Presentation;
@@ -399,8 +405,9 @@
 		09E7AE6F2AABAF1E0020A796 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				09E7AE702AABAF1E0020A796 /* AppConfig */,
 				09E7AE712AABAF1E0020A796 /* AppDelegate.swift */,
+				09989AD82AB3AA6F002802C3 /* Environment.swift */,
+				09E7AE702AABAF1E0020A796 /* AppConfig */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -408,6 +415,8 @@
 		09E7AE702AABAF1E0020A796 /* AppConfig */ = {
 			isa = PBXGroup;
 			children = (
+				09989AD42AB3AA1C002802C3 /* DevAppConfig.xcconfig */,
+				09989AD62AB3AA2F002802C3 /* ProdAppConfig.xcconfig */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -534,6 +543,8 @@
 			files = (
 				09E7AE792AABAF1F0020A796 /* Assets.xcassets in Resources */,
 				09C74D842AADD1B100D49DDB /* PageTableViewCell.xib in Resources */,
+				09989AD52AB3AA1C002802C3 /* DevAppConfig.xcconfig in Resources */,
+				09989AD72AB3AA2F002802C3 /* ProdAppConfig.xcconfig in Resources */,
 				09E7AE7A2AABAF1F0020A796 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +592,7 @@
 				0920B88F2AACB97C0043ACC9 /* NetworkSessionManager.swift in Sources */,
 				09989ACE2AB38C76002802C3 /* SoftwareMediaPresentableModel.swift in Sources */,
 				09C74D7D2AADBDA900D49DDB /* BaseNavigationController.swift in Sources */,
+				09989AD92AB3AA6F002802C3 /* Environment.swift in Sources */,
 				09E7AE772AABAF1F0020A796 /* SearchVC.swift in Sources */,
 				09C74D862AADE64100D49DDB /* OnlyTextTableCell.swift in Sources */,
 				09C74D792AAD142400D49DDB /* OnlyImageViewCollectionCell.swift in Sources */,
@@ -634,6 +646,7 @@
 /* Begin XCBuildConfiguration section */
 		09E7AE512AABAF040020A796 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09989AD42AB3AA1C002802C3 /* DevAppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -682,7 +695,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -694,6 +707,7 @@
 		};
 		09E7AE522AABAF040020A796 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09989AD62AB3AA2F002802C3 /* ProdAppConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -736,7 +750,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -765,7 +779,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.itunessearch-nesine.app.iTunesSearchApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itunessearch-nesine.app.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -792,7 +806,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.itunessearch-nesine.app.iTunesSearchApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itunessearch-nesine.app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -813,6 +827,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itunessearch-nesine.app.iTunesSearchAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -833,6 +850,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itunessearch-nesine.app.iTunesSearchAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -27,7 +27,7 @@ final class SoftwareContentUseCaseImpl: SoftwareContentUseCase {
     }
     
     deinit {
-        print("deinit \(String(describing: self))")
+        Loger.info("deinit \(String(describing: self))")
     }
     
     func searchSoftwareContents(term: String,
