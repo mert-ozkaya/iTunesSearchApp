@@ -37,6 +37,6 @@ class OnlyImageViewCollectionCell: UICollectionViewCell {
     }
     
     func setupUI(url: String) {
-        self.imageView.kf.setImage(with: URL(string: url), placeholder: UIImage(named: ""))
+        self.imageView.kf.setImage(with: URL(string: url), placeholder: UIImage(named: "placeholder"))
     }
 }
