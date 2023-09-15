@@ -28,8 +28,8 @@ struct SoftwareMediaPresentableModel {
     }
 }
 
-enum SoftwareMediaDataSizeRangeType {
-    case between0_100
+enum SoftwareMediaDataSizeRangeType: Int {
+    case between0_100 = 0
     case between100_250
     case between250_500
     case plus500

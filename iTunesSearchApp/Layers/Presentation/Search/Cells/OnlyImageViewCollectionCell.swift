@@ -16,12 +16,13 @@ class OnlyImageViewCollectionCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 8
         imageView.clipsToBounds = true
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.layer.borderWidth = 1
         return imageView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .blue
         addSubview(imageView)
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: topAnchor),
@@ -36,7 +37,6 @@ class OnlyImageViewCollectionCell: UICollectionViewCell {
     }
     
     func setupUI(url: String) {
-        self.backgroundColor = .purple
-        self.imageView.kf.setImage(with: URL(string: url))
+        self.imageView.kf.setImage(with: URL(string: url), placeholder: UIImage(named: ""))
     }
 }

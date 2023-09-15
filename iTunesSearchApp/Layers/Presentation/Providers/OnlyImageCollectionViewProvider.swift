@@ -44,7 +44,6 @@ final class OnlyImageCollectionViewProvider: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .yellow
         addSubview(collectionView)
         
         NSLayoutConstraint.activate([
@@ -73,6 +72,7 @@ final class OnlyImageCollectionViewProvider: UIView {
             }
         } else {
             sections.append(.init(fileSizeRangeType: content.sizeRangeType, rows: [content.url]))
+            sections.sort(by: { $0.fileSizeRangeType.rawValue < $1.fileSizeRangeType.rawValue })
         }
         self.delegate = delegate
         collectionView.reloadData()

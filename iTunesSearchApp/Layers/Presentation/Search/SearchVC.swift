@@ -44,11 +44,6 @@ class SearchVC: UIViewController {
         self.view.backgroundColor = .white
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel?.start()
-    }
-    
     func prepareUI() {
         view.addSubview(searchBar)
         view.addSubview(tableView)

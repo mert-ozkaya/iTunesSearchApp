@@ -12,14 +12,14 @@ class TitleCollectionHeaderView: UICollectionReusableView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .red
+        label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.purple
+        self.backgroundColor = UIColor.yellow
         addSubview(titleLabel)
         
         NSLayoutConstraint.activate([

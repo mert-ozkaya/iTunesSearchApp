@@ -28,40 +28,6 @@ final class SearchViewModel {
         self.softwareContentUseCase = softwareContentUseCase
     }
     
-    
-    func start() {
-        prepareUI()
-    }
-    
-    func prepareUI() {
-//        var sectionPageContent: [SectionPageContent] = []
-//        for index in 1...1 {
-//            let provider1 = OnlyImageCollectionViewProvider()
-//            provider1.setData(sections: [ .init(headerTitle: CollectionSectionType.between0_100.title, rows: [])])
-//            sectionPageContent.append(.init(type: .between0_100, provider: provider1))
-//
-//            let provider2 = OnlyImageCollectionViewProvider()
-//            provider2.setData(sections: [ .init(headerTitle: CollectionSectionType.between100_250.title, rows: [])])
-//            sectionPageContent.append(.init(type: .between100_250, provider: provider2))
-//
-//
-//            let provider3 = OnlyImageCollectionViewProvider()
-//            provider3.setData(sections: [.init(headerTitle: CollectionSectionType.between250_500.title, rows: [])])
-//            sectionPageContent.append(.init(type: .between250_500, provider: provider3))
-//
-//            let provider4 = OnlyImageCollectionViewProvider()
-//            provider4.setData(sections: [ .init(headerTitle: CollectionSectionType.plus500.title, rows: [])])
-//            sectionPageContent.append(.init(type: .plus500, provider: provider4))
-//
-//            _sections.append(ContentSection(pageHeaderTitle: "Page-\(index)", page: index, sectionPageContent: sectionPageContent))
-//        }
-        
-        //        _sections.append(NoDataSection())
-        
-        
-        triggerState(.updateUI)
-    }
-    
     func triggerState(_ state: VMState) {
         DispatchQueue.main.async { [weak self] in
             self?.stateClosure?(state)
