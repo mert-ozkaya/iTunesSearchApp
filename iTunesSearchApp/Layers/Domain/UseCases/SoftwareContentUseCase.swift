@@ -35,7 +35,9 @@ final class SoftwareContentUseCaseImpl: SoftwareContentUseCase {
         if term != lastTerm {
             page = 0
             isEndOfSearchSoftware = false
-            imageDownloader = ImageDownloader<String>()
+            DispatchQueue.global().sync { [weak self] in
+                self?.imageDownloader = ImageDownloader<String>()
+            }
         } else if term == lastTerm && isEndOfSearchSoftware {
             completion(.failure(.endOfPages))
             return nil
