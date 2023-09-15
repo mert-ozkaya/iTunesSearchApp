@@ -35,6 +35,7 @@ final class SoftwareContentUseCaseImpl: SoftwareContentUseCase {
         if term != lastTerm {
             page = 0
             isEndOfSearchSoftware = false
+            imageDownloader = ImageDownloader<String>()
         } else if term == lastTerm && isEndOfSearchSoftware {
             completion(.failure(.endOfPages))
             return nil
@@ -50,7 +51,6 @@ final class SoftwareContentUseCaseImpl: SoftwareContentUseCase {
         }
         
         lastTerm = term
-        
         return softwareContentRepository.searchSoftwareContents(term: term,
                                                                 page: page) { [weak self] (result) in
             switch result {
@@ -60,7 +60,9 @@ final class SoftwareContentUseCaseImpl: SoftwareContentUseCase {
                     completion(.failure(.resultsEmpty(currentPage: self?.page)))
                     return
                 }
-                self?.downloadImages(softwareMedia: softwareMediaPage.results, currentPage: self?.page ?? 0, completion: completion)
+                self?.downloadImages(softwareMedia: softwareMediaPage.results,
+                                     currentPage: self?.page ?? 0,
+                                     completion: completion)
             case .failure(let error):
                 Loger.error("Searching network error: \(error)")
                 completion(.failure(.dataNotfound))
@@ -68,7 +70,8 @@ final class SoftwareContentUseCaseImpl: SoftwareContentUseCase {
         }
     }
 
-    func downloadImages(softwareMedia: [SoftwareMedia], currentPage: Int,
+    func downloadImages(softwareMedia: [SoftwareMedia],
+                        currentPage: Int,
                         completion: @escaping SearchSoftwareContentsCompletion) {
         var allImageUrls = [String]()
         softwareMedia.forEach { item in

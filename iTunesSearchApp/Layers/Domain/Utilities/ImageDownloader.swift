@@ -12,8 +12,13 @@ class ImageDownloader<T> where T: Hashable {
     private let semaphore = DispatchSemaphore(value: 3)
     private let downloadQueue = DispatchQueue.global(qos: .utility)
     
-    private var activeDownloads = [T: DownloadTask]()
+    private var activeDownloads = [T: DownloadTask?]()
     private var completionCount = 0
+    
+    deinit {
+        cancellAllActiveDownloads()
+        Loger.success("deinit \(String(describing: self))")
+    }
     
     func getDataSize(data: Data?, allowedUnits: ByteCountFormatter.Units = .useKB) -> Double? {
         guard let data = data else { return nil }
@@ -65,7 +70,7 @@ class ImageDownloader<T> where T: Hashable {
                         }
                     }
                     
-                    DispatchQueue.global().async {
+                    DispatchQueue.global(qos: .utility).async {
                         self?.activeDownloads[key] = downloadTask
                     }
                 }
@@ -81,13 +86,13 @@ class ImageDownloader<T> where T: Hashable {
     
     func cancelDownload(key: T) {
         let task = activeDownloads[key]
-        task?.cancel()
+        task??.cancel()
         activeDownloads[key] = nil
     }
     
     func cancellAllActiveDownloads() {
-        activeDownloads.forEach { (key: T, _) in
-            cancelDownload(key: key)
+        for item in activeDownloads {
+            cancelDownload(key: item.key)
         }
     }
 }
